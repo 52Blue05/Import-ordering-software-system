@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public final class DatabaseConfig {
     private static final String DEFAULT_URL = "jdbc:postgresql://localhost:5432/ioms";
     private static final String DEFAULT_USER = "postgres";
-    private static final String DEFAULT_PASSWORD = "postgres";
+    private static final String DEFAULT_PASSWORD = "300905";
 
     static {
         try {
@@ -24,8 +24,7 @@ public final class DatabaseConfig {
         return DriverManager.getConnection(
                 env("IOMS_DB_URL", DEFAULT_URL),
                 env("IOMS_DB_USER", DEFAULT_USER),
-                env("IOMS_DB_PASSWORD", DEFAULT_PASSWORD)
-        );
+                env("IOMS_DB_PASSWORD", DEFAULT_PASSWORD));
     }
 
     private static String env(String key, String fallback) {
